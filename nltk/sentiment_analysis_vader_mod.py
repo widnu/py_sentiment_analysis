@@ -68,7 +68,11 @@ tricky_sentences = [
     "I hate you",
     "I do not hate you",
     "I love you",
-    "I like you"
+    "I like you",
+    "Sounds like you blame yourself / taking on a lot of responsibility for that.", # compound: 0.0258, neg: 0.161, neu: 0.671, pos: 0.168,
+    "It seems like you are pretty tough on yourself.", # compound: 0.6369, neg: 0.114, neu: 0.455, pos: 0.432,
+    "Would you feel the same way if your best friend was in the same situation?", # compound: 0.8126, neg: 0.0, neu: 0.637, pos: 0.363, 
+    "You think the worst of yourself but wouldn’t judge others as harshly in the same situation" # compound: -0.3716, neg: 0.145, neu: 0.855, pos: 0.0, 
  ]
     
 sentences.extend(tricky_sentences)
