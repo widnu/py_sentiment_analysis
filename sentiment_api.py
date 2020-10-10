@@ -147,16 +147,10 @@ def api_sentiment_vader_with_neutral():
     ss_neu = ss['neu']
     ss_neg = ss['neg']
 
-    if ss_compound > 0:
-        if ss_pos > ss_neu:
-            y_pred = 'Positive'
-        else:
-            y_pred = 'Neutral'
-    elif ss_compound < 0:
-        if ss_neg > ss_neu:
-            y_pred = 'Negative'
-        else:
-            y_pred = 'Neutral'
+    if ss_compound >= 0.5:
+        y_pred = 'Positive'
+    elif ss_compound <= -0.5:
+        y_pred = 'Negative'
     else:
         y_pred = 'Neutral'
 
