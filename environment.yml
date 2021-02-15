@@ -4,9 +4,6 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - pip:
-    - gunicorn # for app deployment
-    - mkl-service
   - aiohttp=3.7.3=py37hcc03f2d_1
   - alabaster=0.7.12=py37_0
   - argh=0.26.2=py37_0
@@ -213,6 +210,8 @@ dependencies:
   - zlib=1.2.11=vc14h1cdd9ab_1
   - zstd=1.4.5=h1f3a1b7_2
   - pip:
+    - gunicorn # for app deployment
+    - mkl-service==2.3.0
     - chatterbot==1.0.8
     - comtypes==1.1.7
     - en-core-web-md==3.0.0
