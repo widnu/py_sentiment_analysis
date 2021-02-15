@@ -4,6 +4,9 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - pip:
+    - gunicorn # for app deployment
+    - mkl-service
   - aiohttp=3.7.3=py37hcc03f2d_1
   - alabaster=0.7.12=py37_0
   - argh=0.26.2=py37_0
@@ -90,7 +93,6 @@ dependencies:
   - mccabe=0.6.1=py37_1
   - mistune=0.8.4=py37hfa6e2cd_1001
   - mkl=2019.4=245
-  - mkl-service=2.3.0=py37hb782905_0
   - mkl_fft=1.1.0=py37h45dec08_0
   - mkl_random=1.0.4=py37h343c172_0
   - multidict=5.1.0=py37hcc03f2d_1
