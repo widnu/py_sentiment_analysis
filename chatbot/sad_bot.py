@@ -32,9 +32,7 @@ trainer = ChatterBotCorpusTrainer(bot)
 # )
 
 # You can also specify file paths to corpus files or directories of corpus files when calling the train method.
-trainer.train(
-    "./corpus/"
-)
+trainer.train("./corpus/")
 
 
 # from chatterbot.trainers import ListTrainer

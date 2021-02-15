@@ -12,6 +12,9 @@ from nltk.tag import pos_tag
 from nltk.tokenize import word_tokenize
 from nltk.stem.wordnet import WordNetLemmatizer
 
+from chatterbot import ChatBot
+from chatterbot.trainers import ChatterBotCorpusTrainer
+
 import re, string
 
 import json
@@ -169,6 +172,30 @@ def api_sentiment_vader_with_neutral():
     print(result)
     return result
 
+##################################################
+@app.route('/api/v2/resources/chatbot', methods=['POST'])
+def api_chatbot():
+    json_data = request.json
+    sentence = json_data["sentence"]
+    print("input:", sentence)
+
+    bot = ChatBot('Buddy')
+    
+    # Create a new trainer for the chatbot
+    # trainer = ChatterBotCorpusTrainer(bot)
+    # trainer.train("./chatbot/corpus/")
+    
+	# Get a response to the input text 'I would like to book a flight.'
+    bot_response = bot.get_response(sentence)
+    print("Bot reply:", bot_response)
+
+    # json response via REST APIs
+    result = json.dumps({
+        'bot_sentence': str(bot_response)
+        })
+    print(result)
+    return result
+	
 ##################################################
 
 if __name__ == '__main__':
