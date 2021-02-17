@@ -1,5 +1,3 @@
-twitter_samples
-stopwords
 punkt
 averaged_perceptron_tagger
 wordnet
